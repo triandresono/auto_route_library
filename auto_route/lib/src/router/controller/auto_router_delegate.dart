@@ -24,9 +24,8 @@ class AutoRouterDelegate extends RouterDelegate<UrlState> with ChangeNotifier {
     Router.of(context)
         .routeInformationProvider
         ?.routerReportsNewRouteInformation(
-          RouteInformation(
-            location: url,
-          ),
+          RouteInformation(location: url),
+          isNavigation: true,
         );
   }
 
